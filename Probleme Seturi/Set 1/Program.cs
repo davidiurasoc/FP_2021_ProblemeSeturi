@@ -24,6 +24,48 @@ namespace Set_1
             // problema12();
             // problema13();
             // problema14(); // rezolvata
+            // problema15(); // rezolvata
+        }
+
+        private static void problema15()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Problema 15: Se dau 3 numere. Sa se afiseze in ordine crescatoare. ");
+            Console.WriteLine();
+
+            Console.Write("1.: "); int a = int.Parse(Console.ReadLine());
+            Console.Write("2.: "); int b = int.Parse(Console.ReadLine());
+            Console.Write("3.: "); int c = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            if (a > b && b > c || a == b && b == c || a == b && b > c || b == c && a > b) 
+            {
+                Console.WriteLine("Rezultatul este: " + c + " " + b + " " + a);
+            }
+            else if (a > b && b < c && a > c) 
+            {
+                Console.WriteLine("Rezultatul este: " + b + " " + c + " " + a);
+            }
+            else if (b > a && a > c) 
+            {
+                Console.WriteLine("Rezultatul este: " + c + " " + a + " " + b);
+            }
+            else if (b > a && a < c && b > c || a == c && a < b) 
+            {
+                Console.WriteLine("Rezultatul este: " + a + " " + c + " " + b);
+            }
+            else if (c > a && a > b || a == b && c > a) 
+            {
+                Console.WriteLine("Rezultatul este: " + b + " " + a + " " + c);
+            }
+            else if (c > b && a < b || b == c && a < b)
+            {
+                Console.WriteLine("Rezultatul este: " + a + " " + b + " " + c);
+            }
+            else
+            {
+                Console.WriteLine("Rezultatul este: " + b + " " + a + " " + c);
+            }
         }
 
         private static void problema14()
