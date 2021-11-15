@@ -22,7 +22,31 @@ namespace Set_1
             // problema10(); //rezolvata
             // problema11();
             // problema12();
-            problema13();
+            // problema13();
+            // problema14(); // rezolvata
+        }
+
+        private static void problema14()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Problema 14: Determianti daca un numar n este palindrom."); 
+            Console.WriteLine("(un numar este palindrom daca citit invers obtinem un numar egal cu el, de ex. 121 sau 12321.)");
+            Console.WriteLine();
+
+            int n;
+
+            Console.WriteLine( "n = ");
+            n = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            if (n.IsPalindrom())
+            {
+                Console.WriteLine("Numarul este palindrom!");
+            }
+            else
+            {
+                Console.WriteLine("Numarul nu este palindrom!");
+            }
         }
 
         private static void problema13()
