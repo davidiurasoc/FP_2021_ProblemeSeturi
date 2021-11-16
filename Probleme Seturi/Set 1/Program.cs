@@ -15,7 +15,7 @@ namespace Set_1
             // problema3();  // rezolvata
             // problema4();  // rezolvata
             // problema5();
-            // problema6();
+            // problema6();  // rezolvata 
             // problema7();  // rezolvata
             // problema8();  // rezolvata
             // problema9();  // rezolvata
@@ -25,6 +25,68 @@ namespace Set_1
             // problema13();
             // problema14(); // rezolvata
             // problema15(); // rezolvata
+            // problema16();
+            // problema17(); // rezolvata 
+            // problema18();
+            // problema19();
+            // problema20();
+            // problema21();
+        }
+
+        private static void problema21()
+        {
+        }
+
+        private static void problema20()
+        {
+        }
+
+        private static void problema19()
+        {
+        }
+
+        private static void problema18()
+        {
+        }
+
+        private static void problema17()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Problema 16:  Determianti cel mai mare divizor comun si cel mai mic multiplu comun a doua numere. ");
+            Console.WriteLine("Folositi algoritmul lui Euclid. ");
+            Console.WriteLine();
+
+            Console.Write("Introduceti primul numar: ");
+            int number1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Introduceti al doilea numar: ");
+            int number2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine($"CMMDC al lui {number1} si {number2} este {gcd(number1, number2)}");
+            Console.WriteLine($"CMMMC al lui {number1} si {number2} este {lcm(number1, number2)}");
+
+            int gcd(int a, int b)
+            {
+                while (a != b)
+                {
+                    if (a > b)
+                    {
+                        a -= b;
+                    }
+                    else
+                    {
+                        b -= a;
+                    }
+                }
+                return a;
+            }
+            int lcm(int a, int b)
+            {
+                return a * b / gcd(number1, number2);
+            }
+        }
+
+        private static void problema16()
+        {
         }
 
         private static void problema15()
@@ -189,6 +251,23 @@ namespace Set_1
 
         private static void problema6()
         {
+            Console.WriteLine();
+            Console.WriteLine("Problema 6: Detreminati daca trei numere pozitive a, b si c pot fi lungimile laturilor unui triunghi. ");
+            Console.WriteLine();
+
+            Console.Write("Numarul 1.: "); int a = int.Parse(Console.ReadLine());
+            Console.Write("Numarul 2.: "); int b = int.Parse(Console.ReadLine());
+            Console.Write("Numarul 3.: "); int c = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            if (a < b + c && b < a + c && c < a + b)
+            {
+                Console.WriteLine("Da, pot fi!");
+            }
+            else
+            {
+                Console.WriteLine("Nu, nu pot fi!");
+            }
         }
 
         private static void problema5()
@@ -196,10 +275,6 @@ namespace Set_1
             Console.WriteLine();
             Console.WriteLine("Problema 5: Extrageti si afisati a k-a cifra de la sfarsitul unui numar. Cifrele se numara de la dreapta la stanga. ");
             Console.WriteLine();
-
-            Console.Write("Introduceti valoarea numar: "); int numar = int.Parse(Console.ReadLine()); // 12345
-            Console.Write("Introduceti valoarea k: "); int k = int.Parse(Console.ReadLine()); // 4
-
         }
 
         private static void problema4()
