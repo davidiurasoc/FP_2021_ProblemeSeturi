@@ -15,18 +15,18 @@ namespace Set_1
             // problema3();  // rezolvata
             // problema4();  // rezolvata
             // problema5();
-            // problema6();  // rezolvata 
+            // problema6();  // rezolvata
             // problema7();  // rezolvata
             // problema8();  // rezolvata
             // problema9();  // rezolvata
             // problema10(); // rezolvata
-            // problema11();
-            // problema12();
-            // problema13();
+            // problema11(); // rezolvata
+            // problema12(); // rezolvata
+            // problema13(); // rezolvata
             // problema14(); // rezolvata
             // problema15(); // rezolvata
             // problema16();
-            // problema17(); // rezolvata 
+            // problema17(); // rezolvata
             // problema18();
             // problema19();
             // problema20();
@@ -87,6 +87,15 @@ namespace Set_1
 
         private static void problema16()
         {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+            int d = int.Parse(Console.ReadLine());
+            int e = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(a + " " + b + " " + c + " " + d + " " + e);
+
+
         }
 
         private static void problema15()
@@ -159,16 +168,110 @@ namespace Set_1
             Console.WriteLine("Problema 13: Determianti cati ani bisecti sunt intre anii y1 si y2.");
             Console.WriteLine();
 
-            Console.Write("Introduceti un numar: "); int y1 = int.Parse(Console.ReadLine());
-            Console.Write("Introduceti un numar: "); int y2 = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti un an: "); int y1 = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti un an: "); int y2 = int.Parse(Console.ReadLine());
+            int aniBisecti = 0;
+
+            if (y1 < y2)
+            {
+                for (int i = y1; i < y2; i++)
+                {
+                    if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0)
+                    {
+                        aniBisecti++;
+                        Console.Write(i + " ");
+                    }
+                }
+            }
+            else if (y1 > y2)
+            {
+                for (int i = y1; i >= y2; i--)
+                {
+                    if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0)
+                    {
+                        aniBisecti++;
+                        Console.Write(i + " ");
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Cei doi ani sunt identici");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine($"Sunt {aniBisecti} ani bisecti intre anul {y1} si anul {y2}");
         }
 
         private static void problema12()
         {
+            Console.WriteLine();
+            Console.WriteLine("Problema 12: Determinati cate numere integi divizibile cu n se afla in intervalul [a, b]. ");
+            Console.WriteLine();
+
+            int counter = 0;
+            Console.Write("Introduceti un numar: "); int n = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti un numar: "); int a = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti un numar: "); int b = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            if (a < b)
+            {
+                for (int i = a; i <= b; i++)
+                {
+                    if (i % n == 0)
+                    {
+                        counter++;
+                        Console.Write(i + " ");
+                    }
+                }
+                Console.WriteLine();
+                Console.WriteLine("Rezultat: " + counter);
+            }
+            else if (a > b)
+            {
+                for (int i = a; i >= b; i--)
+                {
+                    if (i % n == 0)
+                    {
+                        counter++;
+                        Console.Write(i + " ");
+                    }
+                }
+                Console.WriteLine();
+                Console.WriteLine("Rezultat: " + counter);
+            }
+            else
+            {
+                Console.WriteLine("Cele doua numere sunt identice! ");
+            }
         }
 
         private static void problema11()
         {
+            Console.WriteLine();
+            Console.WriteLine("Problema 11: Afisati in ordine inversa cifrele unui numar n. ");
+            Console.WriteLine();
+
+            int n;
+            Console.Write("Introduceti un numar: ");
+            try
+            {
+                n = int.Parse(Console.ReadLine());
+            }
+            catch (OverflowException e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            } 
+
+            while (n != 0)
+            {
+                Console.Write(n % 10);
+                n = n / 10;
+            }
+            Console.WriteLine();
         }
 
         private static void problema10()
