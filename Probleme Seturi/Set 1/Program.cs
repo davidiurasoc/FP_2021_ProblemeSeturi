@@ -29,18 +29,85 @@ namespace Set_1
             // problema17(); // rezolvata
             // problema18();
             // problema19();
-            // problema20();
-            // problema21();
+            // problema20(); *
+            // problema21(); // rezolvata
         }
 
         private static void problema21()
         {
+            Console.WriteLine();
+            Console.WriteLine("Problema 21: Ghiciti un numar intre 1 si 1024");
+            Console.WriteLine();
+
+            Random rnd = new Random();
+            int numarulAles = rnd.Next(1024);
+            int nrInput;
+
+            do
+            {
+                Console.Write("Introduceti un numar: ");
+                nrInput = int.Parse(Console.ReadLine());
+
+                if (nrInput == numarulAles)
+                {
+                    Console.WriteLine("Ai ghicit numarul! Felicitari");
+                    Console.WriteLine();
+                }
+                else if (nrInput < numarulAles)
+                {
+                    Console.WriteLine("Numarul este prea mic!");
+                    Console.WriteLine();
+                }
+                else
+                {
+                    Console.WriteLine("Numarul este prea mare");
+                    Console.WriteLine();
+                }
+            }
+            while (nrInput != numarulAles);
         }
 
         private static void problema20()
         {
-        }
+            int num1 = 13;
+            int num2 = 30;
+            double d;
 
+            d = (double)num1 / num2; // 0.433333333333333
+            Console.WriteLine(d);
+            
+            double fract = d - Math.Truncate(d); // 0.433333333333333 - 0
+            Console.WriteLine(fract); // 0.433333333333333
+            
+            int maxDecimal = 6;
+            
+            while (maxDecimal > 0 && fract != 0)
+            {
+                // fract = 0.433333333333333
+                int cifraZecimala;
+                cifraZecimala = (int)Math.Truncate(fract * 10); // 4
+                Console.Write($"{cifraZecimala}"); // 4 - 
+
+
+                fract = fract * 10 - Math.Truncate(fract * 10); // 0.33333333333333
+
+                maxDecimal--; // 5
+            }
+            Console.WriteLine();
+
+            if (num1 % 2 == 0  && num1 % 5 == 0)
+            {
+                Console.WriteLine($"fractia {d} este periodica simpla! ");
+            }
+            else if (num1 == (2 ^ num2) * (5 ^ num1) && num1 >= 0 && num2 >= 0)
+            {
+                Console.WriteLine($"fractia {d} este neperiodica! ");
+            }
+            else if (d % 2 == 0 && d % 5 == 0)
+            {
+                Console.WriteLine($"fractia periodica {d} este mixta");
+            }
+        }
         private static void problema19()
         {
         }
