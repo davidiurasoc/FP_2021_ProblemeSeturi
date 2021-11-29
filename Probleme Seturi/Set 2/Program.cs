@@ -12,6 +12,85 @@ namespace Set_2
         {
             // problema1(); // rezolvata
             // problema2(); // rezolvata
+            // problema3(); // rezolvata
+            // problema4();
+            // problema5();
+            // problema6(); // rezolvata
+        }
+
+        private static void problema6()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Problema 6: Se da o secventa de n numere. Sa se determine daca numerele din secventa sunt in ordine crescatoare. ");
+            Console.WriteLine();
+
+            int secondNr;
+            int x = 1;
+
+            Console.Write("Introduceti valoare lui n: "); int n = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti un numar: "); int firstNr = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); secondNr = int.Parse(Console.ReadLine());
+                if (firstNr > secondNr || firstNr == secondNr)
+                {
+                    x = 0;
+                }
+                firstNr = secondNr;
+            }
+
+            Console.WriteLine();
+            if (x == 1)
+            {
+                Console.WriteLine("Numerele sunt in ordine crescatoare!");
+            }
+            else
+            {
+                Console.WriteLine("Numerle nu sunt in ordine crescatoare!");
+            }
+            Console.WriteLine();
+        }
+
+        private static void problema5()
+        {
+        }
+
+        private static void problema4()
+        {
+        }
+
+        private static void problema3()
+        {
+            Console.WriteLine("Problema 3: Calculati suma si produsul numerelor de la 1 la n. ");
+
+            Console.Write("Introduceti un numar: "); int n = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            int x = n;
+            int z = x;
+
+            int suma = 0;
+            for (int i = 1; n != 0; i++)
+            {
+                suma = suma + i;
+                n--;
+            }
+            Console.WriteLine($"Suma numerelor de la 1 la {x} este: {suma}");
+
+            int produs = 1;
+            if (z > 0)
+            {
+                for (int y = 1; x != 0; y++)
+                {
+                    produs = produs * y;
+                    x--;
+                }
+                Console.WriteLine($"Produsul numerelor de la 1 la {z} este: {produs}");
+            }else
+            {
+                Console.WriteLine($"Produsul numerelor de la 1 la {z} este: {produs - 1}");
+            }
         }
 
         private static void problema2()
@@ -57,7 +136,6 @@ namespace Set_2
 
             Console.Write("Cate numere vreti sa introduceti: "); int n = int.Parse(Console.ReadLine());
             int counter = 0;
-            int num;
 
             do
             {
@@ -70,7 +148,7 @@ namespace Set_2
                 }
             }
             while (n != 0);
-            Console.WriteLine(counter);
+            Console.WriteLine($"Sunt {counter} numere pare");
         }
     }
 }
