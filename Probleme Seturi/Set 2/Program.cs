@@ -16,6 +16,35 @@ namespace Set_2
             // problema4();
             // problema5();
             // problema6(); // rezolvata
+            // problema7(); // rezolvata
+        }
+
+        private static void problema7()
+        {
+            Console.WriteLine("Se da o secventa de n numere. Sa se determine cea mai mare si cea mai mica valoare din secventa. ");
+            Console.WriteLine();
+
+            int n, a2;
+            Console.Write("Introduceti n: "); n = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti a: "); int a1 = int.Parse(Console.ReadLine());
+            int min = a1;
+            int max = a1;
+
+            for (int i = 1; i < n; i++)
+            {
+                Console.Write("Introduceti a: "); a2 = int.Parse(Console.ReadLine());
+                if (a2 < min)
+                {
+                    min = a2;
+                }
+                if (a2 > max)
+                {
+                    max = a2;
+                }
+            }
+            Console.WriteLine("Minimum: " + min);
+            Console.WriteLine("Maximum: " + max);
+
         }
 
         private static void problema6()

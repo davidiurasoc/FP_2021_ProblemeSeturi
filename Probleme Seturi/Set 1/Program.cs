@@ -13,7 +13,7 @@ namespace Set_1
             // problema1();  // rezolvata
             // problema2();  // rezolvata
             // problema3();  // rezolvata
-            // problema4();  // rezolvata
+             problema4();  // rezolvata
             // problema5();
             // problema6();  // rezolvata
             // problema7();  // rezolvata
