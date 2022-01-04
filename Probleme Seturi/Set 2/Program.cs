@@ -14,7 +14,7 @@ namespace Set_2
             // problema2(); // rezolvata
             // problema3(); // rezolvata
             // problema4(); // rezolvata
-            // problema5();
+            // problema5(); // rezolvata
             // problema6(); // rezolvata
             // problema7(); // rezolvata
             // problema8(); // rezolvata
@@ -213,6 +213,26 @@ namespace Set_2
 
         private static void problema5()
         {
+            Console.WriteLine("Cate elemente dintr-o secventa de n numere sunt egale cu pozitia pe care apar in secventa.");
+            Console.WriteLine("Se considera ca primul element din secventa este pe pozitia 0. "); Console.WriteLine();
+
+            Console.Write("Introduceti valoarea lui n: "); int n = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            int st = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); int num = int.Parse(Console.ReadLine());
+                if (num == i)
+                {
+                    st++;
+                    // Console.WriteLine("*");
+                }
+            }
+            Console.WriteLine($"Sunt {st} elemente!");
+
+
+
         }
 
         private static void problema4()
