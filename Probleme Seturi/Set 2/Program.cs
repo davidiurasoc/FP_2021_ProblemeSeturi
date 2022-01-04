@@ -13,7 +13,7 @@ namespace Set_2
             // problema1(); // rezolvata
             // problema2(); // rezolvata
             // problema3(); // rezolvata
-            // problema4();
+            // problema4(); // rezolvata
             // problema5();
             // problema6(); // rezolvata
             // problema7(); // rezolvata
@@ -217,6 +217,29 @@ namespace Set_2
 
         private static void problema4()
         {
+            Console.Write("Introduceti valoarea lui n: "); int n = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti valoarea lui a: "); int a = int.Parse(Console.ReadLine()); Console.WriteLine();
+            int loc = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); int num = int.Parse(Console.ReadLine());
+                if (loc == 0) // locul primului "a" care apare
+                {
+                    if (num == a)
+                    {
+                        loc = i;
+                    }
+                }
+            }
+            if (loc > 0)
+            {
+                Console.WriteLine($"Numarul {a} se afla pe pozitia {loc}!");
+            }
+            else
+            {
+                Console.WriteLine("-1");
+            }
         }
 
         private static void problema3()
