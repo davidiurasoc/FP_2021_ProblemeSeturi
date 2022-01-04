@@ -20,10 +20,48 @@ namespace Set_2
             // problema8(); // rezolvata
             // problema9(); // rezolvata
             // problema10();// rezolvata
+            // problema11();
+            // problema12(); // rezolvata
+            // problema13();
+        }
+
+        private static void problema13()
+        {
+        }
+
+        private static void problema12()
+        {
+            Console.WriteLine("Cate grupuri de numere consecutive diferite de zero sunt intr-o secventa de n numere. ");
+            Console.WriteLine("Considerati fiecare astfel de grup ca fiind un cuvant, zero fiind delimitator de cuvinte. "); Console.WriteLine();
+            
+            Console.Write("Introduceti valoarea lui n: "); int n = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti un numar: "); int num = int.Parse(Console.ReadLine());
+            int store = num;
+            int group = 0;
+
+            //1, 2, 0, 3, 4, 5, 0, 0, 6, 7, 0, 0
+            for (int i = 1; i < n; i++)
+            {
+                store = num;
+                Console.Write("Introduceti un numar: "); num = int.Parse(Console.ReadLine());
+                if (store > 0 && num == 0 || i == (n - 1) && num > 0)
+                {
+                    group++;
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Sunt {group} grupuri de numere consecutive diferite de zero!");
+        }
+
+        private static void problema11()
+        {
         }
 
         private static void problema10()
         {
+            Console.WriteLine("Se da o secventa de n numere. Care este numarul maxim de numere consecutive egale din secventa. ");
+            Console.WriteLine();
+
             Console.Write("Introduceti lungimea secventei de numere: "); int n = int.Parse(Console.ReadLine());
             Console.Write("Introduceti un numar: "); int a = int.Parse(Console.ReadLine());
             int max = 1;
