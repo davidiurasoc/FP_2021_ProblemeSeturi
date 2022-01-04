@@ -17,6 +17,98 @@ namespace Set_2
             // problema5();
             // problema6(); // rezolvata
             // problema7(); // rezolvata
+            // problema8(); // rezolvata
+            // problema9(); // rezolvata
+            // problema10();// rezolvata
+        }
+
+        private static void problema10()
+        {
+            Console.Write("Introduceti lungimea secventei de numere: "); int n = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti un numar: "); int a = int.Parse(Console.ReadLine());
+            int max = 1;
+            int cnt = 1;
+
+            for (int i = 1; i < n; i++)
+            {
+                int s = a;
+                Console.Write("Introduceti un numar: "); int b = int.Parse(Console.ReadLine());
+                if (b == a)
+                {
+                    cnt++;
+                    if (cnt > max)
+                    {
+                        max = cnt;
+                    }
+                }
+                else
+                {
+                    a = b;
+                    cnt = 1;
+                }
+            }
+            Console.WriteLine(max);
+        }
+
+        private static void problema9()
+        {
+            Console.WriteLine("Sa se determine daca o secventa de n numere este monotona. ");
+            Console.WriteLine("Secventa monotona = secventa monoton crescatoare sau monoton descrescatoare. ");
+            Console.WriteLine();
+
+            Console.Write("Introduceti lungimea secventei de numere: "); int n = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti un numar: "); int a = int.Parse(Console.ReadLine());
+            int mDes = 1;
+            int mCres = 1;
+            
+            for (int i = 2; i <= n; i++)
+            {
+                int s = a;
+                Console.Write("Introduceti un numar: "); a = int.Parse(Console.ReadLine());
+                if (a < s)
+                {
+                    mDes++;
+                }
+                else if (a > s)
+                {
+                    mCres++;
+                }
+            }
+            Console.WriteLine();
+
+            if (mDes == n)
+            {
+                Console.WriteLine("Secventa este monoton descrescatoare!");
+            }
+            else if (mCres == n)
+            {
+                Console.WriteLine("Secventa este monoton crescatoare!");
+            }
+            else
+            {
+                Console.WriteLine("Secventa nu este monotona");
+            }
+        }
+
+        private static void problema8()
+        {
+            Console.WriteLine("Determianti al n-lea numar din sirul lui Fibonacci.");
+            Console.WriteLine("Sirul lui Fibonacci se construieste astfel: f1 = 0, f2 = 1, f_n = f_(n-1) + f(n-2). Exemplu: 0, 1, 1, 2, 3, 5, 8 ...");
+            Console.WriteLine();
+
+            int n1 = 0, n2 = 1, n3 = 0;
+            Console.Write("Introduceti un numar: "); int n = int.Parse(Console.ReadLine());
+            //Console.Write(n1 + " " + n2 + " ");
+
+            for (int i = 2; i < n; i++)
+            {
+                n3 = n1 + n2;
+                //Console.Write(n3 + " ");
+                n1 = n2;
+                n2 = n3;
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Numarul al {n}-lea din sirul lui Fibonacci este: {n3}");
         }
 
         private static void problema7()
