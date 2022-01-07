@@ -13,8 +13,8 @@ namespace Set_1
             // problema1();  // rezolvata
             // problema2();  // rezolvata
             // problema3();  // rezolvata
-             problema4();  // rezolvata
-            // problema5();
+            // problema4();  // rezolvata
+            // problema5();  // rezolvata 
             // problema6();  // rezolvata
             // problema7();  // rezolvata
             // problema8();  // rezolvata
@@ -444,6 +444,28 @@ namespace Set_1
         {
             Console.WriteLine();
             Console.WriteLine("Problema 5: Extrageti si afisati a k-a cifra de la sfarsitul unui numar. Cifrele se numara de la dreapta la stanga. ");
+            Console.WriteLine();
+
+            Console.Write("Introduceti un numar: "); int num = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti valoarea k: "); int k = int.Parse(Console.ReadLine());
+            int szr = 1;
+            int rez = 0;
+
+            if (k == 1)
+            {
+                rez = num % 10;
+                Console.WriteLine(rez);
+            }
+            else if (k > 1)
+            {
+                for (int i = 2; i <= k; i++)
+                {
+                    szr = szr * 10;
+                    rez = num / szr;
+                    rez = rez % 10;
+                }
+                Console.WriteLine($"A {k}-a cifra din numarul {num} este: {rez}");
+            }
             Console.WriteLine();
         }
 
