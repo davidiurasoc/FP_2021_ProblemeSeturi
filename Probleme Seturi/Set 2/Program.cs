@@ -22,6 +22,7 @@ namespace Set_2
             // problema10();// rezolvata
             // problema11();
             // problema12(); // rezolvata
+            // problema13();
         }
 
         private static void problema13()
