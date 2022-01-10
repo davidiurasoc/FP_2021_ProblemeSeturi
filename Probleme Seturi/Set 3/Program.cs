@@ -13,8 +13,48 @@ namespace Set_3
             // problema1(); // rezolvata
             // problema2(); // rezolvata
             // problema3(); // rezolvata
-
+            // problema4(); // rezolvata
             
+        }
+
+        private static void problema4()
+        {
+            Console.WriteLine("Deteminati printr-o singura parcurgere cea mai mica si cea mai mare valoare dintr-un vector si de cate ori apar acestea");
+            Console.WriteLine();
+
+            Console.Write("Introduceti un numar: "); int n = int.Parse(Console.ReadLine());
+            int[] v = new int[n];
+
+            Console.Write("Introduceti un numar: "); v[0] = int.Parse(Console.ReadLine());
+            int min = v[0];
+            int minC = 1;
+            int max = v[0];
+            int maxC = 1;
+
+            for (int i = 1; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); v[i] = int.Parse(Console.ReadLine());
+                if (v[i] < min)
+                {
+                    min = v[i];
+                }
+                else if (v[i] == min)
+                {
+                    minC++;
+                }
+                else if (v[i] > max)
+                {
+                    max = v[i];
+                }
+                else if (v[i] == max)
+                {
+                    maxC++;
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Cea mai mica valoare este {min} si apare de {minC} ori.");
+            Console.WriteLine($"Cea mai mare valoare este {max} si apare de {maxC} ori.");
+            Console.WriteLine();
         }
 
         private static void problema3()
