@@ -10,6 +10,78 @@ namespace Set_3
     {
         static void Main(string[] args)
         {
+            // problema1(); // rezolvata
+            // problema2(); // rezolvata
+            // problema3(); // rezolvata
+
+            
+        }
+
+        private static void problema3()
+        {
+            Console.WriteLine("Sa se determine pozitiile dintr-un vector pe care apar cel mai mic si cel mai mare element al vectorului.");
+            Console.WriteLine();
+
+            Console.Write("Introduceti un numar: "); int n = int.Parse(Console.ReadLine());
+            int[] v = new int[n];
+            Console.WriteLine();
+            Console.Write("Introduceti un numar: "); v[0] = int.Parse(Console.ReadLine());
+            int min = v[0];
+            int minl = 0;
+            int max = v[0];
+            int maxl = 0;
+
+            for (int i = 1; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); v[i] = int.Parse(Console.ReadLine());
+                if (min > v[i])
+                {
+                    min = v[i];
+                    minl = i;
+                }
+                else if (max < v[i])
+                {
+                    max = v[i];
+                    maxl = i;
+                }
+            }
+            Console.WriteLine($"Pozitia pe care se afla cel mai mic numar al vectorului este: {minl}");
+            Console.WriteLine($"Pozitia pe care se afla cel mai mare numar al vectorului este: {maxl}");
+            Console.WriteLine();
+            Console.WriteLine($" Min = {min}");
+            Console.WriteLine($" Max = {max}");
+            Console.WriteLine();
+        }
+
+        private static void problema2()
+        {
+            Console.WriteLine("Se da un vector cu n elemente si o valoare k. Se cere sa se determine prima pozitie din vector pe care apare k.");
+            Console.WriteLine("Daca k nu apare in vector rezultatul va fi -1. ");
+            Console.WriteLine();
+
+            Console.Write("Introduceti un numar: "); int n = int.Parse(Console.ReadLine());
+            Console.Write("Care numar il cautati: "); int k = int.Parse(Console.ReadLine());
+            int[] v = new int[n];
+            bool b = false;
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); v[i] = int.Parse(Console.ReadLine());
+                if (v[i] == k)
+                {
+                    Console.WriteLine($"Numarul {k} se afla pe pozitia {i}.");
+                    b = true;
+                    break;
+                }
+                else if (b == false && i == n - 1)
+                {
+                    Console.WriteLine("-1");
+                }
+            }
+        }
+
+        private static void problema1()
+        {
             Console.WriteLine("Calculati suma elementelor unui vector de n numere citite de la tastatura. Rezultatul se va afisa pe ecran.");
             Console.WriteLine();
 
