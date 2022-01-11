@@ -14,7 +14,51 @@ namespace Set_3
             // problema2(); // rezolvata
             // problema3(); // rezolvata
             // problema4(); // rezolvata
+            // problema5(); // rezolvata
             
+        }
+
+        private static void problema5()
+        {
+            Console.WriteLine("Se da un vector cu n elemente, o valoare e si o pozitie din vector k. Se cere sa se insereze valoarea e in vector pe pozitia k. Primul element al vectorului se considera pe pozitia zero. ");
+            Console.WriteLine();
+            Console.Write("Lungimea vectorului: "); int n = int.Parse(Console.ReadLine());
+            Console.Write("Valoarea e: " ); int e = int.Parse(Console.ReadLine());
+            Console.Write("Pozitia k: "); int k = int.Parse(Console.ReadLine()); Console.WriteLine();
+            int[] v = new int[n];
+            int eNumIndex = 0, kIndex = 0, kNumar = 0;
+
+            for (int i = 0; i < v.Length; i++)
+            {
+                Console.Write("Introduceti un numar: "); v[i] = int.Parse(Console.ReadLine());
+                if (v[i] == e)
+                {
+                    eNumIndex = i;
+                }
+                if (i == k)
+                {
+                    kIndex = i;
+                    kNumar = v[i];
+                }
+            }
+            Console.WriteLine();
+
+            Console.Write("Acesta este vectorul neschimbat: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(v[i] + " ");
+            }
+            Console.WriteLine();
+
+            v[kIndex] = e;
+            v[eNumIndex] = kNumar;
+
+            Console.Write("Acesta  este vectorul schimbat: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(v[i] + " ");
+            }
+            Console.WriteLine();
         }
 
         private static void problema4()
