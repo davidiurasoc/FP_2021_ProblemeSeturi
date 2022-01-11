@@ -15,7 +15,89 @@ namespace Set_3
             // problema3(); // rezolvata
             // problema4(); // rezolvata
             // problema5(); // rezolvata
+            // problema6(); // rezolvata
+            // problema7(); // rezolvata
+        }
+
+        private static void problema7()
+        {
+            Console.WriteLine("Reverse. Se da un vector nu n elemente. Se cere sa se inverseze ordinea elementelor din vector. Prin inversare se intelege ca primul element devine ultimul, al doilea devine penultimul etc.");
+            Console.WriteLine();
+            Console.Write("Introduceti lungimea vectorului: "); int n = int.Parse(Console.ReadLine());
+            int[] vector = new int[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); vector[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine();
+
+            int[] x = vector;
+            Console.Write("Vectorul neschimbat: ");
+            foreach (int i in vector)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+
+            Array.Reverse(x);
+            Console.Write("Vectorul schimbat: ");
+            foreach (int i in x)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+        }
+
+        private static void problema6()
+        {
+            Console.WriteLine("Se da un vector cu n elemente si o pozitie din vector k. Se cere sa se stearga din vector elementul de pe pozitia k. Prin stergerea unui element, toate elementele din dreapta lui se muta cu o pozitie spre stanga. ");
+            Console.WriteLine();
+            Console.Write("Introduceti lungimea vectorului: "); int n = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti un numar: "); int k = int.Parse(Console.ReadLine());
+            int[] vector = new int[n];
+            int st = 0;
             
+            if (k > n || k < 0)
+            {
+                Console.WriteLine("Numarul nu este corect!");
+                Console.Write("Introduceti din nou un numar: "); k = int.Parse(Console.ReadLine());
+            }
+            
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); vector[i] = int.Parse(Console.ReadLine());
+                if (i == k - 1)
+                {
+                    st = i;
+                    vector[i] = 0;
+                }
+            }
+            Console.WriteLine();
+
+            Console.Write("Vector neschimbat: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(vector[i] + " ");
+            }
+            Console.WriteLine();
+
+            for (int i = st + 1; i < n; i++)
+            {
+                vector[i - 1] = vector[i];
+                if (i == n - 1)
+                {
+                    vector[i] = 0;
+                }
+            }
+
+            Console.Write("Vector schimbat: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(vector[i] + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine();
         }
 
         private static void problema5()
