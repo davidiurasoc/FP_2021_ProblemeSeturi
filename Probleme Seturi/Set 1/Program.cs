@@ -360,9 +360,13 @@ namespace Set_1
             Console.WriteLine();
 
             if (y == 0)
+            {
                 Console.WriteLine($"Numarul {n} este prim! ");
+            }
             else
+            {
                 Console.WriteLine($"Numarul {n} nu este prim! ");
+            }
         }
 
         private static void problema9()

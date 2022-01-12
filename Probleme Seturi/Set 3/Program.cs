@@ -17,6 +17,107 @@ namespace Set_3
             // problema5(); // rezolvata
             // problema6(); // rezolvata
             // problema7(); // rezolvata
+            // problema8(); // rezolvata
+            // problema9();
+            // problema10(); // rezolvata
+            // problema11(); // rezolvata
+        }
+
+        private static void problema11()
+        {
+            Console.WriteLine("Se da un numar natural n. Se cere sa se afiseze toate numerele prime mai mici sau egale cu n (ciurul lui Eratostene). ");
+            Console.WriteLine();
+            int f;
+
+            Console.Write("Introduceti un numar: "); int n = int.Parse(Console.ReadLine()); Console.WriteLine();
+            Console.Write("Numerele prime sunt: ");
+            for (int i = 1; i <= n; i++)
+            {
+                f = 0;
+                for (int j = 1; j <= n; j++)
+                {
+                    if (i % j == 0)
+                        f++;
+                }
+                if (f == 2)
+                    Console.Write(i + " ");
+            }
+            Console.WriteLine(); Console.WriteLine();
+        }
+
+        private static void problema10()
+        {
+            Console.WriteLine("Cautare binara. Se da un vector cu n elemente sortat in ordine crescatoare. Se cere sa se determine pozitia unui element dat k. Daca elementul nu se gaseste in vector rezultatul va fi -1. ");
+            Console.WriteLine();
+            Console.Write("Introduceti un numar: "); int n = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti numarul care il cautati: "); int k = int.Parse(Console.ReadLine());
+            int[] v = new int[n];
+            bool x = false;
+            int location = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); v[i] = int.Parse(Console.ReadLine());
+                if (v[i] == k)
+                {
+                    x = true;
+                    location = i;
+                }
+            }
+            Console.WriteLine();
+            if (x == true)
+            {
+                Console.WriteLine("Pozitia pe care se afla numarul " + k + " este: " + location);
+            }
+            else if (x == false)
+            {
+                Console.WriteLine("-1");
+            }
+            Console.WriteLine();
+        }
+
+        private static void problema9()
+        {
+        }
+
+        private static void problema8()
+        {
+            Console.WriteLine("Rotire. Se da un vector cu n elemente. Rotiti elementele vectorului cu o pozitie spre stanga. Prin rotire spre stanga primul element devine ultimul, al doilea devine primul etc. ");
+            Console.WriteLine();
+            Console.Write("Introduceti lungimea vectorului:"); int n = int.Parse(Console.ReadLine());
+            int[] vector = new int[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); vector[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine();
+            Console.Write("Vectorul neschimbat: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(vector[i] + " ");
+            }
+            Console.WriteLine();
+
+            int aux = vector[0];
+
+            for (int i = 0; i < n; i++)
+            {
+                if (i < n - 1)
+                {
+                    vector[i] = vector[i + 1];
+                }
+                else
+                {
+                    vector[i] = aux;
+                }
+            }
+            Console.Write("Vectorul schimbat: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(vector[i] + " ");
+            }
+            Console.WriteLine();
         }
 
         private static void problema7()
