@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Set_3
 {
@@ -21,6 +17,122 @@ namespace Set_3
             // problema9();
             // problema10(); // rezolvata
             // problema11(); // rezolvata
+            // problema12(); // rezolvata
+            // problema13(); // rezolvata
+            problema14();
+            problema15();
+            problema27();
+            problema28();
+            problema29();
+        }
+
+        private static void problema29()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void problema28()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void problema27()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void problema15()
+        {
+        }
+
+        private static void problema14()
+        {
+
+        }
+
+        private static void problema13()
+        {
+            Console.WriteLine("Sortare prin insertie. Implementati algoritmul de sortare <Insertion Sort>. ");
+            Console.WriteLine();
+
+            Console.Write("Introduceti lungimea vectorului: "); int n = int.Parse(Console.ReadLine());
+            int[] v = new int[n];
+            int x, y;
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); v[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine();
+            Console.Write("Vectorul nesortat: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(v[i] + " ");
+            }
+            for (int i = 1; i < n; i++)
+            {
+                x = v[i];
+                y = 0;
+                for (int j = i - 1; j >= 0 && y != 1;)
+                {
+                    if (x < v[j])
+                    {
+                        v[j + 1] = v[j];
+                        j--;
+                        v[j + 1] = x;
+                    }
+                    else y = 1;
+                }
+            }
+            Console.WriteLine();
+            Console.Write("Vectorul sortat: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(v[i] + " ");
+            }
+            Console.WriteLine();
+        }
+
+        private static void problema12()
+        {
+            Console.WriteLine("Sortare selectie. Implementati algoritmul de sortare <Selection Sort>. ");
+            Console.WriteLine();
+            Console.Write("Introduceti lungimea vectoruui: "); int n = int.Parse(Console.ReadLine());
+            int[] v = new int[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); v[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine();
+            Console.Write("Vectorul nesortat: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(v[i] + " ");
+            }
+
+            int aux, cmm;
+            for (int i = 0; i < n - 1; i++)
+            {
+                cmm = i;
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (v[j] < v[cmm])
+                    {
+                        cmm = j;
+                    }
+                }
+                aux = v[cmm];
+                v[cmm] = v[i];
+                v[i] = aux;
+            }
+            Console.WriteLine();
+            Console.Write("Vectorul sortat: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(v[i] + " ");
+            }
+            Console.WriteLine();
         }
 
         private static void problema11()
