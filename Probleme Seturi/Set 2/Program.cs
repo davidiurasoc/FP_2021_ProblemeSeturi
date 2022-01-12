@@ -20,13 +20,7 @@ namespace Set_2
             // problema8(); // rezolvata
             // problema9(); // rezolvata
             // problema10();// rezolvata
-            // problema11();
             // problema12(); // rezolvata
-            // problema13();
-        }
-
-        private static void problema13()
-        {
         }
 
         private static void problema12()
@@ -51,10 +45,6 @@ namespace Set_2
             }
             Console.WriteLine();
             Console.WriteLine($"Sunt {group} grupuri de numere consecutive diferite de zero!");
-        }
-
-        private static void problema11()
-        {
         }
 
         private static void problema10()

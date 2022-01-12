@@ -14,7 +14,6 @@ namespace Set_3
             // problema6(); // rezolvata
             // problema7(); // rezolvata
             // problema8(); // rezolvata
-            // problema9();
             // problema10(); // rezolvata
             // problema11(); // rezolvata
             // problema12(); // rezolvata
@@ -200,10 +199,6 @@ namespace Set_3
                 Console.WriteLine("-1");
             }
             Console.WriteLine();
-        }
-
-        private static void problema9()
-        {
         }
 
         private static void problema8()

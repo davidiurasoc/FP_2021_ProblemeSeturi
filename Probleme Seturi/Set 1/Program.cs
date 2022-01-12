@@ -13,8 +13,7 @@ namespace Set_1
             // problema1();  // rezolvata
             // problema2();  // rezolvata
             // problema3();  // rezolvata
-             problema4();  // rezolvata
-            // problema5();
+            // problema4();  // rezolvata
             // problema6();  // rezolvata
             // problema7();  // rezolvata
             // problema8();  // rezolvata
@@ -25,11 +24,7 @@ namespace Set_1
             // problema13(); // rezolvata
             // problema14(); // rezolvata
             // problema15(); // rezolvata
-            // problema16();
             // problema17(); // rezolvata
-            // problema18();
-            // problema19();
-            // problema20(); *
             // problema21(); // rezolvata
         }
 
@@ -67,55 +62,6 @@ namespace Set_1
             while (nrInput != numarulAles);
         }
 
-        private static void problema20()
-        {
-            int num1 = 13;
-            int num2 = 30;
-            double d;
-
-            d = (double)num1 / num2; // 0.433333333333333
-            Console.WriteLine(d);
-            
-            double fract = d - Math.Truncate(d); // 0.433333333333333 - 0
-            Console.WriteLine(fract); // 0.433333333333333
-            
-            int maxDecimal = 6;
-            
-            while (maxDecimal > 0 && fract != 0)
-            {
-                // fract = 0.433333333333333
-                int cifraZecimala;
-                cifraZecimala = (int)Math.Truncate(fract * 10); // 4
-                Console.Write($"{cifraZecimala}"); // 4 - 
-
-
-                fract = fract * 10 - Math.Truncate(fract * 10); // 0.33333333333333
-
-                maxDecimal--; // 5
-            }
-            Console.WriteLine();
-
-            if (num1 % 2 == 0  && num1 % 5 == 0)
-            {
-                Console.WriteLine($"fractia {d} este periodica simpla! ");
-            }
-            else if (num1 == (2 ^ num2) * (5 ^ num1) && num1 >= 0 && num2 >= 0)
-            {
-                Console.WriteLine($"fractia {d} este neperiodica! ");
-            }
-            else if (d % 2 == 0 && d % 5 == 0)
-            {
-                Console.WriteLine($"fractia periodica {d} este mixta");
-            }
-        }
-        private static void problema19()
-        {
-        }
-
-        private static void problema18()
-        {
-        }
-
         private static void problema17()
         {
             Console.WriteLine();
@@ -150,19 +96,6 @@ namespace Set_1
             {
                 return a * b / gcd(number1, number2);
             }
-        }
-
-        private static void problema16()
-        {
-            int a = int.Parse(Console.ReadLine());
-            int b = int.Parse(Console.ReadLine());
-            int c = int.Parse(Console.ReadLine());
-            int d = int.Parse(Console.ReadLine());
-            int e = int.Parse(Console.ReadLine());
-
-            Console.WriteLine(a + " " + b + " " + c + " " + d + " " + e);
-
-
         }
 
         private static void problema15()
@@ -442,13 +375,6 @@ namespace Set_1
             {
                 Console.WriteLine("Nu, nu pot fi!");
             }
-        }
-
-        private static void problema5()
-        {
-            Console.WriteLine();
-            Console.WriteLine("Problema 5: Extrageti si afisati a k-a cifra de la sfarsitul unui numar. Cifrele se numara de la dreapta la stanga. ");
-            Console.WriteLine();
         }
 
         private static void problema4()
