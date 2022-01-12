@@ -19,35 +19,49 @@ namespace Set_3
             // problema11(); // rezolvata
             // problema12(); // rezolvata
             // problema13(); // rezolvata
-            problema14();
-            problema15();
-            problema27();
-            problema28();
-            problema29();
-        }
-
-        private static void problema29()
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void problema28()
-        {
-            throw new NotImplementedException();
+            // problema27(); // rezolvata
         }
 
         private static void problema27()
         {
-            throw new NotImplementedException();
-        }
+            Console.Write("Introduceti lungimea vectoruui: "); int n = int.Parse(Console.ReadLine());
+            Console.Write("Introduceti indexul cautat: "); int index = int.Parse(Console.ReadLine());
+            int[] v = new int[n];
 
-        private static void problema15()
-        {
-        }
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Introduceti un numar: "); v[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine();
+            Console.Write("Vectorul nesortat: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(v[i] + " ");
+            }
 
-        private static void problema14()
-        {
-
+            int aux, cmm;
+            for (int i = 0; i < n - 1; i++)
+            {
+                cmm = i;
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (v[j] < v[cmm])
+                    {
+                        cmm = j;
+                    }
+                }
+                aux = v[cmm];
+                v[cmm] = v[i];
+                v[i] = aux;
+            }
+            Console.WriteLine();
+            Console.Write("Vectorul sortat: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(v[i] + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Numarul de pe pozitia " + index + " este: " + v[index]);
         }
 
         private static void problema13()
